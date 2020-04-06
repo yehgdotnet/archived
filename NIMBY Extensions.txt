@@ -1,0 +1,42 @@
+Extensions;;PDF CSV and TXT;;ext:pdf
+Extensions;;PDF CSV and TXT;;ext:csv
+Extensions;;PDF CSV and TXT;;ext:txt
+Extensions;;MSOffice;;ext:doc
+Extensions;;MSOffice;;ext:xls
+Extensions;;MSOffice;;ext:ppt
+Extensions;;MSOffice 2010;;ext:xlsx
+Extensions;;MSOffice 2010;;ext:docx
+Extensions;;MSOffice 2010;;ext:pptx
+Extensions;;Database;;ext:sql
+Extensions;;Database;;ext:accdb
+Extensions;;Database;;ext:mdb
+Extensions;;Database;;ext:db
+Extensions;;Backups;;ext:bak
+Extensions;;Backups;;ext:backup
+Extensions;;Backups;;ext:back
+Extensions;;Backups;;ext:copy
+Extensions;;Backups;;ext:old
+Extensions;;Backups;;ext:junk
+Extensions;;Logs;;ext:log
+Extensions;;Logs;;ext:logs
+Extensions;;Configs;;ext:config
+Extensions;;Configs;;ext:reg
+Extensions;;Configs;;ext:xml
+Extensions;;Test;;ext:test
+Extensions;;Test;;ext:dev
+Extensions;;Test;;ext:beta
+Extensions;;Test;;ext:sample
+Extensions;;Test;;ext:demo
+Extensions;;Scripts;;ext:sh
+Extensions;;Scripts;;ext:bash
+Extensions;;Scripts;;ext:pl
+Extensions;;Scripts;;ext:bat
+Extensions;;Financial;;ext:qdf
+Extensions;;Financial;;(ext:qbb | ext:qbw)
+Extensions;;Financial;;ext:qbw intext:"sybase"
+Extensions;;Other;;ext:list
+Extensions;;Other;;ext:lst
+Extensions;;Other;;ext:admin
+Extensions;;Other;;ext:adm
+Extensions;;Other;;ext:login
+Extensions;;Other;;ext:passwd

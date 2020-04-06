@@ -1,0 +1,38 @@
+Locations;;Cloud Storage;;site:dl.dropbox.com
+Locations;;Cloud Storage;;inurl:docid site:docs.google.com
+Locations;;Cloud Storage;;site:live.com "skydrive"
+Locations;;Cloud Storage;;site:s3.amazonaws.com
+Locations;;Cloud Storage;;site:cloudfront.net
+Locations;;Document Sharing;;site:scribd.com
+Locations;;Document Sharing;;site:4shared.com
+Locations;;Document Sharing;;site:issuu.com
+Locations;;Document Sharing;;site:docstoc.com
+Locations;;Document Sharing;;site:wepapers.com
+Locations;;Document Sharing;;site:mediafire.com
+Locations;;PasteBin;;site:pastebin.com
+Locations;;PasteBin;;site:snipt.org
+Locations;;PasteBin;;site:drupalbin.com
+Locations;;PasteBin;;site:paste.ubuntu.com
+Locations;;PasteBin;;site:tinypaste.com
+Locations;;PasteBin;;site:paste2.org
+Locations;;PasteBin;;site:codepad.org
+Locations;;PasteBin;;site:dpaste.com
+Locations;;PasteBin;;site:pastie.org
+Locations;;PasteBin;;site:pastebin.mozilla.org
+Locations;;PasteBin;;site:slexy.org
+Locations;;Social;;site:facebook.com
+Locations;;Social;;site:twitter.com
+Locations;;Social;;site:youtube.com
+Locations;;Social;;site:linkedin.com
+Locations;;Forums;;site:groups.google.com
+Locations;;Public presentations charts graphs videos;;site:slideshare.net
+Locations;;Public presentations charts graphs videos;;site:prezi.com
+Locations;;Public presentations charts graphs videos;;site:present.me
+Locations;;Public presentations charts graphs videos;;site:gliffy.com
+Locations;;Public presentations charts graphs videos;;site:www-958.ibm.com inurl:"cognos/manyeyes"
+Locations;;Public presentations charts graphs videos;;site:vimeo.com
+Locations;;Public presentations charts graphs videos;;site:dailymotion.com
+Locations;;Public presentations charts graphs videos;;site:metacafe.com
+Locations;;Public presentations charts graphs videos;;site:authorstream.com
+Locations;;Public presentations charts graphs videos;;site:speakerdeck.com
+Locations;;Public presentations charts graphs videos;;site:lucidchart.com/documents

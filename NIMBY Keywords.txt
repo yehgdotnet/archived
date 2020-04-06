@@ -1,0 +1,35 @@
+Quick Checks;;Passwords;;password
+Quick Checks;;Passwords;;(intext:12345 | intext:qwerty | intext:admin123) intext:"gmail.com" intext:"yahoo.com"
+Quick Checks;;Datadump;;gmail hotmail password
+Quick Checks;;Datadump;;gmail hotmail password diane
+Quick Checks;;Datadump;;gmail hotmail password jennifer
+Quick Checks;;Confidential;;confidential | secret | "not for distribution"
+Patient Records;;Patient Records;;Patient (id | dob| claim | NPI | record)
+PII;;Places of Birth;;(pob| place of birth | birth place | born in)
+PII;;Common;;fname | lname | ssn | "maiden name" | email | address
+Passwds Various Languages;;ALL Various Languages;;(Kennwort | contraseña | mot de passe | parola d’accesso | senha | Paswoord)
+Passwds Various Languages;;Password German;;Kennwort
+Passwds Various Languages;;Password Spanish;;contraseña
+Passwds Various Languages;;Password French;;mot de passe
+Passwds Various Languages;;Password Italian;;parola d’accesso
+Passwds Various Languages;;Password Portuguese;;senha
+Passwds Various Languages;;Password Dutch;;Paswoord
+Passwords;;PassKeywords;password
+Passwords;;PassKeywords;;(pass | password | passwd | credentials | login)
+Passwords;;PassKeywords;;intext:12345 intext:password intext:admin123 intext:"gmail.com" intext:"yahoo.com"
+Passwords;;PassKeywords;;(intext:12345 | intext:qwerty | intext:admin123) intext:"gmail.com" intext:"yahoo.com"
+Passwords;;PassKeywords;;intext:12345 intext:welcome intext:ninja intext:"gmail.com" intext:"yahoo.com"
+Keywords;;Admin;;intext:"admin"
+Keywords;;Admin;;administrator
+Keywords;;Username;;(user | username | uname | uid | usr | credentials | login)
+Keywords;;Datadump;;blvd 75th gmail hotmail password
+Keywords;;Datadump;;blvd steven gmail hotmail password
+Keywords;;Datadump;;blvd susan gmail hotmail password
+Keywords;;Datadump;;gmail hotmail password
+Keywords;;Datadump;;gmail hotmail password diane
+Keywords;;Datadump;;gmail hotmail password jennifer
+Keywords;;Datadump;;gmail hotmail password jennifer blvd
+Keywords;;Datadump;;gmail hotmail password steven
+Keywords;;Datadump;;gmail hotmail password steven blvd
+Keywords;;Datadump;;gmail hotmail password susan
+Keywords;;Confidential;;confidential | secret | "not for distribution"

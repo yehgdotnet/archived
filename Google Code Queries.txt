@@ -1,0 +1,134 @@
+Buffer Overflow Potential;;Format String;;%-?([0-9]+|\*)?s lang:^c$
+Buffer Overflow Potential;;Format String;;print.*%-?([0-9]+|\*)?s lang:^c$
+Buffer Overflow Potential;;Format String;;scanf.*%-?([0-9]+|\*)?s lang:^c$
+Buffer Overflow Potential;;gets;;\sgets\s*\( lang:^c$
+Buffer Overflow Potential;;Insecure Coding;;[_a-zA-Z0-9]+\ *\[\ *sizeof\ +[_a-zA-Z0-9]+\ *\]
+Buffer Overflow Potential;;malloc;;malloc\(\s*strlen\(
+Buffer Overflow Potential;;printf;;^[\ \t]*printf\(getenv
+Buffer Overflow Potential;;printf;;^[\s]+printf\s*\([^\"'\(]+\)
+Buffer Overflow Potential;;strncat;;strncat\s*\(.*sizeof\s*\(.*\)\s*\)\s*;
+Buffer Overflow Potential;;strncpy;;strncpy\(.*?,.*?,(strlen|sizeof)\(
+Buffer Overflow Potential;;strncpy;;strncpy\s*\(.*,.*,\s*strlen\s*\(.*\s*\)
+Cloud Hacking;;Amazon EC2 Keys;;ec2[^\d]["'][A-Z0-9]{20}["']
+Cloud Hacking;;Amazon EC2 Keys;;ec2.*["'][A-Z0-9]{20}["'] ["'][A-Za-z0-9+/]{40}["']
+Cloud Hacking;;Amazon EC2 Keys;;ec2.*["'][A-Z0-9]{20}["']
+Cloud Hacking;;Amazon EC2 Keys;;ec2(\D)*["'][A-Z0-9]{20}["']
+Cloud Hacking;;Amazon Keys;;amazon.*["'][A-Z0-9]{20}["']
+Cloud Hacking;;Amazon Keys;;(amazon|ec2).*["'][A-Z0-9]{20}["']
+Cloud Hacking;;Amazon Keys;;amazon(\D)*["'][A-Z0-9]{20}["']
+Cloud Hacking;;Amazon Keys;;access secret ["'][A-Z0-9]{20}["'] [A-Za-z0-9+/]{40}
+Cloud Hacking;;Amazon Keys;;amazon.*["'][A-Z0-9]{20}["'].*["'][A-Za-z0-9+/]{40}["']
+Cloud Hacking;;Amazon Keys;;aws.*["'][A-Z0-9]{20}["'] ["'][A-Za-z0-9+/]{40}["']
+Cloud Hacking;;Amazon Keys;;amazon.*["'][A-Z0-9]{20}["'] ["'][A-Za-z0-9+/]{40}["']
+Cloud Hacking;;Amazon Keys;;secret.*["'][A-Za-z0-9+/]{40}["']
+Cloud Hacking;;Amazon Keys;;["'][A-Za-z0-9+/]{40}["'].*amazon
+Cross-site Scripting (XSS);;ASP XSS;;input.*type=hidden.*=.*request\.(QUERYSTRING|FORM)
+Cross-site Scripting (XSS);;General;;response\.write\s*\(request\.
+Cross-site Scripting (XSS);;JSP XSS;;<%=.*getParameter*
+Cross-site Scripting (XSS);;JSP XSS;;input.*type=hidden.*=.*request\.getParameter
+Cross-site Scripting (XSS);;JSP XSS;;out\.println\s*\(\s*request\.getparameter\s*\(\s*\"
+Cross-site Scripting (XSS);;PHP XSS;;input.*type=hidden.*=.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS)
+Cross-site Scripting (XSS);;PHP XSS;;lang:php (echo|print).*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS)
+Cross-site Scripting (XSS);;PHP XSS;;lang:php (echo|print).*\$_SERVER.*PHP_SELF
+Cross-site Scripting (XSS);;PHP XSS;;lang:php (echo|print).*\$_SERVER\['HTTP_REFERER']
+Cross-site Scripting (XSS);;PHP XSS;;lang:php (echo|print).*\$_SERVER\['PHP_SELF']
+Cross-site Scripting (XSS);;PHP XSS;;lang:php echo\s*.*?PHP_SELF
+Data Mining;;Emails;;[^[:alnum:]_][A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}[^[:alnum:]_]
+Data Mining;;Emails;;[a-z_\-\.0-9]+@[a-z_\-\.0-9]+\.[a-z]+
+Data Mining;;Emails;;^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$
+Data Mining;;IP Address - Avoid version numbers;;[^v]*([^[:alnum:]_.](1([0-9]{2})|2([0-5]{1}[0-9]{1})|[1-9]{1}[0-9]{1}|[2-9]{1})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})[^[:alnum:]_.])
+Data Mining;;IP Address;;[^[:alnum:]_.](1([0-9]{2})|2([0-5]{1}[0-9]{1})|[1-9]{1}[0-9]{1}|[2-9]{1})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})[^[:alnum:]_.]
+Data Mining;;Internal IP Disclosure;;[^\d]10\.\d\d?\d?\.\d\d?\d?\.\d\d?\d?[^\d] OR [^\d](172\.[123]\d\.\d\d?\d?\.\d\d?\d?)[^\d] OR [^\d](192\.168\.\d\d?\d?\.\d\d?\d?)[^\d]
+Data Mining;;Phone Number;;[^[:alnum:]_]\(?[0-9]{3}\)?[-.\s][0-9]{3}[-.\s][0-9]{4}[^[:alnum:]_]
+Data Mining;;Usernames in the URL;;[a-z0-9+.-]+://([a-z0-9._~%!$&'()*+,;=-]+)@
+Filesystem Interaction;;ASP OpenTextFile;;+FileSystemObject+OpenTextFile\(.*request\.
+Filesystem Interaction;;PHP file GET;;\ file\(.*\$_GET
+Filesystem Interaction;;PHP file POST;;\ file\(.*\$_POST
+Filesystem Interaction;;PHP file_get_cont GET;;file_get_contents\(.*\$_GET
+Filesystem Interaction;;PHP file_get_cont POST;;file_get_contents\(.*\$_POST
+Filesystem Interaction;;PHP fopen Get;;fopen\(.*\$_GET
+Filesystem Interaction;;PHP fopen Post;;fopen\(.*\$_POST
+Handling Sensitive Data;;Credit Cards;;4[0-9]{3}-[0-9]{4}-[0-9]{4}-[0-9]{4}
+Handling Sensitive Data;;Credit Cards;;4[0-9]{3}-[0-9]{4}-[0-9]{4}-[0-9]{4} lang:sql
+Handling Sensitive Data;;Encryption;;(secret|pwd|passphrase|cipher|cypher).*[a-za-z0-9_]+\s+\^\s+[a-za-z0-9_]+
+Handling Sensitive Data;;Encryption;;[a-za-z0-9_]+\s+\^\s+[a-za-z0-9_]+.*(secret|pwd|passphrase|cipher|cypher)
+Handling Sensitive Data;;Encryption;;"-----BEGIN RSA PRIVATE KEY-----"
+Handling Sensitive Data;;Encryption;;"-----BEGIN RSA PRIVATE KEY-----" [A-Za-z0-9+/]{35}(=)?
+Handling Sensitive Data;;Encryption;;"PRIVATE KEY" [A-Za-z0-9+/]{35}(=)?
+Handling Sensitive Data;;Encryption;;"PRIVATE KEY" [A-Za-z0-9+/]{25}(=)?
+Handling Sensitive Data;;Encryption;;"BEGIN PGP PRIVATE KEY" [A-Za-z0-9+/]{31}(=)?
+Handling Sensitive Data;;Passwords;;"backdoor password"
+Handling Sensitive Data;;Passwords;;lang:php mysql_connect\('[a-z]+\.[a-z\.]+', '[a-zA-Z0-9]+' -localhost
+Handling Sensitive Data;;Passwords;;lang:php mysql_connect\(\"[a-z]+\.[a-z\.]+\", \"[a-zA-Z0-9]+\" -localhost
+Handling Sensitive Data;;Passwords;;log.*\(.*\"\+pass
+Handling Sensitive Data;;Patient Records;;NPI[\s=-]*[0-9]{10}[^[:alnum:]_]
+Handling Sensitive Data;;Patient Records;;Patient claim\s*id
+Handling Sensitive Data;;Patient Records;;Patient dob
+Handling Sensitive Data;;Patient Records;;Patient NPI.*[^[:alnum:]_][0-9]{10}[^[:alnum:]_] Payer
+Handling Sensitive Data;;Patient Records;;Patient(.{20}|\s*)id
+Handling Sensitive Data;;SSNs;;[0-9]{3}-[0-9]{2}-[0-9]{4}
+Handling Sensitive Data;;SSNs;;[0-9]{3}-[0-9]{2}-[0-9]{4} lang:sql
+Handling Sensitive Data;;SSNs;;logger " ssn"
+Handling Sensitive Data;;SSNs;;[^[:alnum:]_]([0-6]\d{2}|7([0-356]\d|7[012]))[-\s]\d{2}[-\s]\d{4}[^[:alnum:]_]
+Hard-coded Passwords;;DB UserIds;;;Uid
+Hard-coded Passwords;;MS SQL;;Driver={SQL Server}
+Hard-coded Passwords;;MySQL;;;User Id mySQL
+Hard-coded Passwords;;Oracle;;;User Id Oracle
+Hard-coded Passwords;;Other;;(#|//|#.*$).*[^[:alnum:]_]pass(word)?\s{0,4}=\s{0,3}[[:alnum:]_!@#$~%\/.><^&*();:-]*\s*$
+Hard-coded Passwords;;phpMyAdmin Passwords;;file:phpMyAdmin/config.inc.php .*\['password'].*=.*'.+'
+Hard-coded Passwords;;phpMyAdmin Passwords;;file:phpMyAdmin/config.inc.php password
+Insecure Coding;;7 Fs Instead of 8;;0xfffffff[^0-9a-f]
+Insecure Coding;;Bad errno checking;;"if (errno = E"
+Insecure Coding;;getopt semi-colon instead of colon;;getopt\ *\(argc,\ *argv,\ *\"[^\"]*;
+Insecure Coding;;Logical AND Instead of Bitwise AND;;flags\ *&&\ *[A-Z_]+
+Insecure Coding;;Off-by-one;;\[sizeof\(.*\)\]\ *=\ *'?\\?0'?;$
+Other;;Funny;;"i hate my job"
+Other;;Other;;lang:php \$_SERVER\['HTTP_REFERER']
+Other;;PHP - HTTP Header Injection;;lang:php header.*Location:.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS)
+Other;;Random Injection;;\s+print.*\$cgi->param\s*\([\"']
+Remote Code/Cmd Execution;;.Net;;xp_cmdshell.*\.text
+Remote Code/Cmd Execution;;Perl;;\$.*q.*=.*argv\[ \`.*\$.*q.*\`.*\; lang:perl
+Remote Code/Cmd Execution;;Perl;;\$in.*=.*argv\[ \`.*\$.*in.*\`.*\; lang:perl
+Remote Code/Cmd Execution;;Perl;;\$in.*=.*argv\[ system\s?\(.*\$.*in.*\) lang:perl
+Remote Code/Cmd Execution;;Perl;;\$out.*=.*argv\[ \`.*\$.*out.*\`.*\; lang:perl
+Remote Code/Cmd Execution;;Perl;;\$out.*=.*argv\[ system\s?\(.*\$.*out.*\) lang:perl
+Remote Code/Cmd Execution;;Perl;;\`.*\$.*req.*\`.*\; lang:perl
+Remote Code/Cmd Execution;;Perl;;\`.*\$argv.*\`.*\; lang:perl
+Remote Code/Cmd Execution;;Perl;;\`.*\$opt_.*\`.*\; lang:perl
+Remote Code/Cmd Execution;;Perl;;system\s?\(.*\$.*output.*\) lang:perl
+Remote Code/Cmd Execution;;Perl;;system\s?\(.*\$argv.*\) lang:perl
+Remote Code/Cmd Execution;;Perl;;system\s?\(.*\$opt_.*\) lang:perl
+Remote Code/Cmd Execution;;PHP Eval Code Exec;;lang:php \s+eval\s*\(\s*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS)
+Remote Code/Cmd Execution;;PHP;;lang:php (system|popen|shell_exec|exec).*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS)
+Remote Code/Cmd Execution;;PHP;;lang:php (system|popen|shell_exec|exec)\(.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS)
+Remote Code/Cmd Execution;;POTENTIAL;;cmd\.exe.*\$
+Remote Code/Cmd Execution;;POTENTIAL;;lang:perl \`.*\$.*\`.*\;
+Remote Code/Cmd Execution;;POTENTIAL;;system\s?\(.*\$.*input.*\) lang:perl
+Remote Code/Cmd Execution;;POTENTIAL;;system\s?\(.*\$.*query.*\) lang:perl
+Remote Code/Cmd Execution;;POTENTIAL;;xp_cmdshell.*[\'\"].*\$.*;
+Remote Code/Cmd Execution;;XP_CMDSHELL;;xp_cmdshell.*\$
+Remote Code/Cmd Execution;;XP_CMDSHELL;;xp_cmdshell.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php
+Remote Code/Cmd Execution;;XP_CMDSHELL;;xp_cmdshell.*request\.
+Remote File Include;;PHP - RFI;;(fopen|include|require)(_once)?\s*\(\s*\$_((GET)|(POST)|(REQUEST))[^,.")]*?\.".*?\) lang:php
+Remote File Include;;PHP - RFI;;(include|include_once|require|require_once)\s*(\(|\s).*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php
+Remote File Include;;PHP - RFI;;(open|file|file_get_contents|copy|delete|unlink)\s*(\(|\s).*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php
+Remote File Include;;PHP - RFI;;(upload_tmp_dir|move_uploaded_file)\s*(\(|\s).*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php
+Remote File Include;;PHP - RFI;;imagecreatefrom.*\(.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php
+SQL Injection;;.Net;;select.*from.*where.*\.text
+SQL Injection;;ASP;;delete.*from.*where.*request\.(QUERYSTRING|Form|Cookies)
+SQL Injection;;ASP;;insert.*into.*values.*request\.(QUERYSTRING|Form|Cookies)
+SQL Injection;;ASP;;select.*from.*request\.(QUERYSTRING|Form|Cookies)
+SQL Injection;;ASP;;update.*set.*where.*request\.(QUERYSTRING|Form|Cookies)
+SQL Injection;;JSP/Java Parameters;;.*executeQuery.*getParameter.*
+SQL Injection;;JSP/Java Parameters;;select.*from.*request\.getParameter
+SQL Injection;;JSP/Java Querystring;;delete.*from.*where.*request\.getParameter
+SQL Injection;;JSP/Java Querystring;;insert.*into.*values.*request\.getParameter
+SQL Injection;;JSP/Java Querystring;;update.*set.*where.*request\.getParameter
+SQL Injection;;PHP Parameters;;.*mysql_query\(.*\$$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS).*
+SQL Injection;;PHP Parameters;;delete.*from.*where.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php
+SQL Injection;;PHP Parameters;;insert.*into.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php
+SQL Injection;;PHP Parameters;;insert.*into.*values.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php
+SQL Injection;;PHP Parameters;;lang:php query\(.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS).*\)
+SQL Injection;;PHP Parameters;;lang:php WHERE.*username=.*\$_
+SQL Injection;;PHP Parameters;;select.*from.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php
+SQL Injection;;PHP Parameters;;update.*set.*where.*\$(_GET|_POST|_COOKIE|_REQUEST|HTTP_POST_VARS) lang:php

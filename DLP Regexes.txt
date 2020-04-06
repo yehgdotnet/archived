@@ -1,0 +1,124 @@
+Quick Checks;;SSN Exact;;\b(?!000)(?!666)(?:[0-6]\d{2}|7(?:[0-356]\d|7[012]))[- ](?!00)\d{2}[- ](?!0000)\d{4}\b
+Quick Checks;;CreditCards All Major Credit Cards Bare;;^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$
+Quick Checks;;CreditCards All Major Credit Cards Grouped;;^(?:4\d{3}[ -]*\d{4}[ -]*\d{4}[ -]*\d(?:\d{3})?|5[1-5]\d{2}[ -]*\d{4}[ -]*\d{4}[ -]*\d{4}|6(?:011|5[0-9]{2})[ -]*\d{4}[ -]*\d{4}[ -]*\d{4}|3[47]\d{2}[ -]*\d{6}[ -]*\d{5}|3(?:0[0-5]|[68][0-9])\d[ -]*\d{6}[ -]*\d{4}|(?:2131|1800)[ -]*\d{6}[ -]*\d{5}|35\d{2}[ -]*\d{4}[ -]*\d{4}[ -]*\d{4})$
+Quick Checks;;Bank Account Numbers;;General;;\bacc(oun)?t[\D]{0,30}\d{4,12}\b
+Quick Checks;;Bank Account Numbers;;IBAN International Bank Acct Num;;\b[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}\b
+Quick Checks;;Keywords User Account Info;;\b((passw(or)?d(s)?)|pwd)\b
+Quick Checks;;Passwds Assignment;;\b((passw(or)?d(s)?)|pwd)\b\s{0,4}[=:]{1,2}\s{0,3}[A-Za-z0-9_!@#$~%\/.><^&*();:-]+\b
+Quick Checks;;Passwds Various Languages;;\b(Kennwort|contraseña|mot de passe|parola d’accesso|senha|Paswoord)\b
+Quick Checks;;Keywords User Account Info;;\b((user(name)?(s)?)|uname|uid|usr)\b
+Quick Checks;;Patient Records;;\bPatient\b(.|\n|\r){0,45}\b(id|dob|claim|NPI|record)\b
+Quick Checks;;Amazon Cloud Keys;;\b(amazon|ec2|aws\b).{0,20}["'][A-Z0-9]{20}["']
+Quick Checks;;DB Connection Strings;;(server|host)=.*;.*database=.*;|data\ssource=.*;|ConnectionString
+Keywords;;User Account Info;;\baccesse[sd]\b
+Keywords;;User Account Info;;\badmin(istrator)?(s)?\b
+Keywords;;User Account Info;;\bauth(enticate|orization)?(s)?\b
+Keywords;;User Account Info;;\bauthenticat(ing|ed|ion){1}\b
+Keywords;;User Account Info;;\bcred(ential)?(s)?\b
+Keywords;;User Account Info;;\blog(i|o){1}n(s)?\b
+Keywords;;User Account Info;;\b((passw(or)?d(s)?)|pwd)\b
+Keywords;;User Account Info;;\b((user(name)?(s)?)|uname|uid|usr)\b
+Keywords;;Potentially Interesting;;\b((secur((e(s|d)?){1}|ing))|ssl|privacy|master)\b
+Keywords;;Application;;\b(coded|config(uration)?(s)?|database|db|debug(ging)?|host(s)?|licens(e(d|s)?|ing){1}|log(file)?(s)?|quer(ie|y)(s)?|sql(s)?)\b
+Keywords;;Personal;;\b(birth|dob|ein|email(s|ed)?|employe(e|es|r)|ident(ification|ity)?|maiden|personal|salar(ie|y)(s)?|ssn)\b
+Keywords;;Cryptographic Data;;\b(aes|blowfish|cert(ificate)?(s)?|(de|en)?crypt(ed|o|ography|ing|s|ion)?|enc(ode(s|d)?)?|hash(ed|(e)?s)|hmac|pgp|secret(s)?|sha|md5|tea)\b
+Keywords;;Commerce Info;;\b(account(s)?|cost(s)?|csc|currency|cv(c|v){1}|dollar(s)?|euro(s)?|income|loan(s)?)\b
+CreditCards;;CreditCards;;(\\D|^)\\%?[Bb]\\d{13,19}\\^[\\-\\/\\.\\w\\s]{2,26}\\^[0-9][0-9][01][0-9][0-9]{3}
+CreditCards;;CreditCards;;(\\D|^)\\;\\d{13,19}\\=(\\d{3}|)(\\d{4}|\\=)
+CreditCards;;CreditCards;;[1-9][0-9]{2}\\-[0-9]{2}\\-[0-9]{4}\\^\\d
+CreditCards;;Mastercard;;(\\D|^)5[1-5][0-9]{2}(\\ |\\-|)[0-9]{4}(\\ |\\-|)[0-9]{4}(\\ |\\-|)[0-9]{4}(\\D|$)
+CreditCards;;VISA;;(\\D|^)4[0-9]{3}(\\ |\\-|)[0-9]{4}(\\ |\\-|)[0-9]{4}(\\ |\\-|)[0-9]{4}(\\D|$)
+CreditCards;;Possible CC;;[^0-9a-f\-](?:4\d{3}|5[1-5]\d{2}|6011|3\d{3})(?:\d{12}|-\d{4}-\d{4}-\d{4})[^0-9a-f\.] OR [^0-9a-f\-](?:3[47]\d{2}|2131|1800)(?:\d{11}|-\d{6}-\d{5})[^0-9a-f\.] OR [^0-9a-f\-]2(?:014|149)(?:\d{11}|-\d{7}-\d{4})[^0-9a-f\.] OR [^0-9a-f\-]3(?:[68]\d{2}|0[0-5]\d)(?:\d{10}|-\d{6}-\d{4})[^0-9a-f\.] OR [^0-9a-f\-]4\d{3}(?:\d{9}|-\d{3}-\d{3}-\d{3})[^0-9a-f\.]
+CreditCards;;Possible CC;;4[0-9]{3}-[0-9]{4}-[0-9]{4}-[0-9]{4}
+CreditCards;;All Major Credit Cards Bare;;^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$
+CreditCards;;All Major Credit Cards Grouped;;^(?:4\d{3}[ -]*\d{4}[ -]*\d{4}[ -]*\d(?:\d{3})?|5[1-5]\d{2}[ -]*\d{4}[ -]*\d{4}[ -]*\d{4}|6(?:011|5[0-9]{2})[ -]*\d{4}[ -]*\d{4}[ -]*\d{4}|3[47]\d{2}[ -]*\d{6}[ -]*\d{5}|3(?:0[0-5]|[68][0-9])\d[ -]*\d{6}[ -]*\d{4}|(?:2131|1800)[ -]*\d{6}[ -]*\d{5}|35\d{2}[ -]*\d{4}[ -]*\d{4}[ -]*\d{4})$
+CreditCards;;Credit Cards LANL;;\b(cc|credit(\s{0,3}card)?)[\D]{0,25}(\d{4}([\D]?\d{4}){3}([\D]?\d{3})?|\d{4}[\D]?\d{6}[\D]?\d{5}([\D]?\d{4})?)\b
+CreditCards;;Credit Cards All Major and Most Debit;;\b(1800|2131|30[0-5]\d|3[4-7]\d{2}|4\d{3}|5[0-5]\d{2}|6011|6[2357]\d{2})[- ]?(\d{4}[- ]?\d{4}[- ]?\d{4}|\d{6}[- ]?\d{5})\b
+SSN;;Social Security Number;;[^A-Za-z0-9_]([0-6]\d{2}|7([0-356]\d|7[012]))[-\s]\d{2}[-\s]\d{4}[^A-Za-z0-9_]
+SSN;;Social Security Number;;(\\D|^)[0-9]{9}(\\D|$)
+SSN;;SSN LANL;;\b(ss(n)?|social(\s*security)?)[\D]{0,25}\d{3}[\D]?\d{2}[\D]?\d{4}\b
+SSN;;Social Security Number dashes;;(\\D|^)[0-9]{3}\\-[0-9]{2}\\-[0-9]{4}(\\D|$)
+SSN;;Social Security Number spaces;;(\\D|^)[0-9]{3}\\ [0-9]{2}\\ [0-9]{4}(\\D|$)
+SSN;;Social Security Number;;[0-9]{3}([-\\. \\|])[0-9]{2}\\1[0-9]{4}
+SSN;;SSN Possible;;(?:[0-5][0-9][0-9]|6[0-4][0-9])-\d{2}-\d{4}]] OR ^(?:[0-5][0-9][0-9]|6[0-4][0-9])-\d{2}-\d{4}$
+SSN;;SSN Exact;;\b(?!000)(?!666)(?:[0-6]\d{2}|7(?:[0-356]\d|7[012]))[- ](?!00)\d{2}[- ](?!0000)\d{4}\b
+PII;;Places of Birth;;\b(pob|place\sof\sbirth|birth\splace|born\sin)\b
+PII;;Dates of Birth;;\b(dob|date\s{0,3}of\s{0,3}birth|birth\s{0,3}date|born\s{0,3}on)[\D]{0,30}((19|20)?\d\d[-\s\\/\.]((0)?[1-9]|[12][0-9]|3[01])[-\s\\/\.]((0)?[1-9]|[12][0-9]|3[01])|((0)?[1-9]|[12][0-9]|3[01])[-\s\\/\.](0[1-9]|[12][0-9]|3[01])[-\s\\/\.](19|20)?\d\d|((0)?[1-9]|[12][0-9]|3[01])([\S\s]{0,3}(nd|th|st|rd)[\s\S]{0,3})?\s{0,3}(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|jun(e)?|jul(y)?|aug(ust)?|sep|oct(ober)?|(sept|nov|dec)(ember)?)(\.)?\s{0,3}(19|20)?\d\d|(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|jun(e)?|jul(y)?|aug(ust)?|sep|oct(ober)?|(sept|nov|dec)(ember)?)(\.)?\s{0,3}((0)?[1-9]|[12][0-9]|3[01])([\S\s]{0,3}(nd|th|st|rd)[\S\s]{0,3})?(,)?\s{0,3}(19|20)?\d\d)\b
+PII;;Mother Maiden Name;;\bmaiden(\s{0,3}name)\b
+Bank Account Numbers;;General;;\bacc(oun)?t[\D]{0,30}\d{4,12}\b
+Bank Account Numbers;;IBAN International Bank Acct Num;;\b[a-zA-Z]{2}[0-9]{2}[a-zA-Z0-9]{4}[0-9]{7}([a-zA-Z0-9]?){0,16}\b
+TaxID;;EU VAT;;\b((DK|FI|HU|LU|MT|SI)(-)?\d{8})|((BE|EE|DE|EL|LT|PT)(-)?\d{9})|((PL|SK)(-)?\d{10})|((IT|LV)(-)?\d{11})|((LT|SE)(-)?\d{12})|(AT(-)?U\d{8})|(CY(-)?\d{8}[A-Z])|(CZ(-)?\d{8,10})|(FR(-)?[\dA-HJ-NP-Z]{2}\d{9})|(IE(-)?\d[A-Z\d]\d{5}[A-Z])|(NL(-)?\d{9}B\d{2})|(ES(-)?[A-Z\d]\d{7}[A-Z\d])\b
+Patient Records;;Patient Records;;\bPatient\b(.|\n|\r){0,25}\b(id|dob|claim|NPI|record)\b
+Patient Records;;Patient Records;;\bPatient\b(.|\n|\r){0,25}\bNPI\b(.|\n|\r){0,10}\b[0-9]{10}\b
+Patient Records;;Patient Records;;\bPatient\b(.|\n|\r){0,25}\bNPI\b(.|\n|\r){0,10}\b[0-9]{10}\b(.|\n|\r){0,15}\bPayer\b
+Tech Data Mining;;Possible Server Path Disclosure (unix);;"(?:(?<![/\w""']))(?:/usr/(?:share|lib|local|s?bin)/|/etc/(?!(?:master\.)?passwd)|/var/|/tmp/|/Users/|/s?bin/|/opt/|/root/|/home/)[\w/\.]+ AND NOT (?:href|src|dynsrc|lowsrc|link|url|action|data|codebase|classid|archive|background|pluginspage|profile|usemap|cite|longdesc|path)\s*=\s*['""]?(?:(?<![/\w""']))(?:/usr/(?:share|lib|local|s?bin)/|/etc/(?!(?:master\.)?passwd)|/var/|/tmp/|/Users/|/s?bin/|/opt/|/root/|/home/)[\w/\.]+"
+Tech Data Mining;;Possible Server Path Disclosure (win32);;(?:>|\s|=)[c-zC-Z]:[\\/][a-zA-Z0-9]
+Tech Data Mining;;Possible Server Path Disclosure (win32);;\b[a-z]:\\(?:[^\\/:*?"<>|\r\n]+\\)*[^\\/:*?"<>|\r\n]*
+Tech Data Mining;;Emails;;[^A-Za-z0-9_][A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}[^A-Za-z0-9_]
+Tech Data Mining;;Emails;;[a-z_\-\.0-9]+@[a-z_\-\.0-9]+\.[a-z]+
+Tech Data Mining;;Emails;;^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}$
+Tech Data Mining;;Emails;;\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,6}\b
+Tech Data Mining;;Emails w No Consecutive Dots;;\b[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,6}\b
+Tech Data Mining;;IP Address - Avoid version numbers;;[^v]*([^A-Za-z0-9_.](1([0-9]{2})|2([0-5]{1}[0-9]{1})|[1-9]{1}[0-9]{1}|[2-9]{1})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})[^A-Za-z0-9_.])
+Tech Data Mining;;IP Address;;^(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$
+Tech Data Mining;;IP Address;;[^A-Za-z0-9_.](1([0-9]{2})|2([0-5]{1}[0-9]{1})|[1-9]{1}[0-9]{1}|[2-9]{1})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})\.(1([0-9]{2})|2([0-5]{1}[0-9]{1})|[0-9]{1,2})[^A-Za-z0-9_.]
+Tech Data Mining;;Internal IP Disclosure;;[^\d]10\.\d\d?\d?\.\d\d?\d?\.\d\d?\d?[^\d] OR [^\d](172\.[123]\d\.\d\d?\d?\.\d\d?\d?)[^\d] OR [^\d](192\.168\.\d\d?\d?\.\d\d?\d?)[^\d]
+Tech Data Mining;;Phone Number;;[^A-Za-z0-9_]\(?[0-9]{3}\)?[-.\s][0-9]{3}[-.\s][0-9]{4}[^A-Za-z0-9_]
+Tech Data Mining;;Phone Number North America;;\(?\b[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}\b
+Tech Data Mining;;Domain Name;;\b((?=[a-z0-9-]{1,63}\.)[a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]{2,63}\b
+Tech Data Mining;;UNC Server and Share;;^\\\\(?<server>[a-z0-9 %._-]+)\\(?<share>[a-z0-9 $%._-]+)
+Encryption Related;;PGP Private and Public Key Blocks;;-----BEGIN\sPGP\sP(RIVATE|UBLIC)\sKEY\sBLOCK-----(.|\n|\r)+-----END\sPGP\sP(RIVATE|UBLIC)\sKEY\sBLOCK-----
+Encryption Related;;PGP Keys;;BEGIN PGP PRIVATE KEY(.|\n|\r)+[A-Za-z0-9+/]{32}
+Encryption Related;;RSA Private Key Block;;-----BEGIN\sRSA\sPRIVATE\sKEY-----(.|\n|\r)+-----END\sRSA\sPRIVATE\sKEY-----
+Encryption Related;;Keys;;-----BEGIN RSA PRIVATE KEY-----" [A-Za-z0-9+/]{35}(=)?
+Encryption Related;;Keys;;PRIVATE KEY(.|\n|\r)+[A-Za-z0-9+/]{35}
+Encryption Related;;Keys;;PRIVATE KEY(.|\n|\r)+[A-Za-z0-9+/]{25}
+Encryption Related;;Keys;;\b(secret|pwd|passphrase|cipher|cypher).*[a-za-z0-9_]+\s+\^\s+[a-za-z0-9_]+\b
+Encryption Related;;Keys;;\b[a-za-z0-9_]+\s+\^\s+[a-za-z0-9_]+.*(secret|pwd|passphrase|cipher|cypher)\b
+Passwds;;Passwd Assignment;;\b((passw(or)?d(s)?)|pwd)\b\s{0,4}[=:]{1,2}\s{0,3}[A-Za-z0-9_!@#$~%\/.><^&*();:-]+\b
+Passwds;;Username and Password;;\bu[=:].*[\r\n]{0,2}.*\bp[:=].*
+Passwds Various Languages;;ALL;;\b(Kennwort|contraseña|mot de passe|parola d’accesso|senha|Paswoord)\b
+Passwds Various Languages;;Password German;;Kennwort
+Passwds Various Languages;;Password Spanish;;contraseña
+Passwds Various Languages;;Password French;;mot de passe
+Passwds Various Languages;;Password Italian;;parola d’accesso
+Passwds Various Languages;;Password Portuguese;;\bsenha\b
+Passwds Various Languages;;Password Dutch;;Paswoord
+Confidential Files;;Confidential Do Not Distribute;;confidential(.|\r|\n)*not\sfor\sdistribution
+National ID Numbers;;Austrian SSN;;\b\d{4}(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-5])\d{2}\b
+National ID Numbers;;Canadian Social Insurance Number;;\b[1-9]\d{2}[- ]?\d{3}[- ]?\d{3}\b
+National ID Numbers;;Chinese National Identification Card Number;;\b\d{6}(19|20)\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{4}\b
+National ID Numbers;;Croatian Master Citizen Number;;\b(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])(9\d{2}|0[01]\d)\d{6}\b
+National ID Numbers;;Danish Civil Registration Number;;\b(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])\d{2}[-+]?\d{4}\b
+National ID Numbers;;Finnish Social Security Number;;\b(0[1-9]|[12]\d|3[01])(0[1-9]|1[0-2])\d{2}[-+a]\d{3}\w\b
+National ID Numbers;;Indian Permanent Account Number;;\b[a-z]{3}[abcfghjlpt][a-z]\d{4}[a-z]\b
+National ID Numbers;;Indian Vehicle License Plate Number;;\b([a-z]{2}[ ]\d{1,2}|dl[ ][1-9]?\d[ ][cprstvy])[ ][a-z]{0,2}[ ]\d{1,4}\b
+National ID Numbers;;Italian Fiscal Code;;\b([bcdfghj-np-tv-z][a-z]{2}){2}\d{2}[a-ehlmprst]([04][1-9]|[1256]\d|[37][01])(\d[a-z]{3}|z\d{3})[a-z]\b
+National ID Numbers;;Norwegian Social Security Number;;\b(0[1-9]|[12]\d|3[01])([04][1-9]|[15][0-2])\d{7}\b
+National ID Numbers;;Romanian Personal Numeric Code;;\b[1-8]\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])(0[1-9]|[1-4]\d|5[0-2]|99)\d{4}\b
+National ID Numbers;;South Korean Resident Registration Number;;\b\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\-[0-49]\d{6}\b
+National ID Numbers;;Swedish Personal Identification Number;;\b(19\d{2}|20\d{2}|\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])[-+]?\d{4}\b
+National ID Numbers;;Taiwanese National Identification Card Number;;\b[a-z][12]\d{8}\b
+National ID Numbers;;United Kingdom National Insurance Number;;\b[abceghj-prstw-z][abceghj-nprstw-z][ ]?\d{2}[ ]?\d{2}[ ]?\d{2}[ ]?[a-dfm]?\b
+National ID Numbers;;United States Social Security Number;;\b(?!000)(?!666)([0-6]\d{2}|7([0-356]\d|7[012]))[- ]?(?!00)\d{2}[- ]?(?!0000)\d{4}\b
+Cloud;;Amazon Cloud Keys;;\b(amazon|ec2|aws\b).{0,20}["'][A-Z0-9]{20}["']
+Cloud;;Amazon Cloud Keys;;ec2[^\d]["'][A-Z0-9]{20}["']
+Cloud;;Amazon Cloud Keys;;ec2.*["'][A-Z0-9]{20}["'] ["'][A-Za-z0-9+/]{40}["']
+Cloud;;Amazon Cloud Keys;;ec2.*["'][A-Z0-9]{20}["']
+Cloud;;Amazon Cloud Keys;;ec2(\D)*["'][A-Z0-9]{20}["']
+Cloud;;Amazon Cloud Keys;;amazon.*["'][A-Z0-9]{20}["']
+Cloud;;Amazon Cloud Keys;;(amazon|ec2).*["'][A-Z0-9]{20}["']
+Cloud;;Amazon Cloud Keys;;amazon(\D)*["'][A-Z0-9]{20}["']
+Cloud;;Amazon Cloud Keys;;access secret ["'][A-Z0-9]{20}["'] [A-Za-z0-9+/]{40}
+Cloud;;Amazon Cloud Keys;;amazon.*["'][A-Z0-9]{20}["'].*["'][A-Za-z0-9+/]{40}["']
+Cloud;;Amazon Cloud Keys;;aws.*["'][A-Z0-9]{20}["'] ["'][A-Za-z0-9+/]{40}["']
+Cloud;;Amazon Cloud Keys;;amazon.*["'][A-Z0-9]{20}["'] ["'][A-Za-z0-9+/]{40}["']
+Cloud;;Amazon Cloud Keys;;secret.*["'][A-Za-z0-9+/]{40}["']
+Cloud;;Amazon Cloud Keys;;["'][A-Za-z0-9+/]{40}["'].*amazon
+Database Connection String;;ALL DB Connection Strings;;(server|host)=.*;.*database=.*;|data\ssource=.*;|ConnectionString
+Database Connection String;;ALL DB Connection Strings Muliline;;(server|host)=.*;(.|\n|\r){0,4}.*database=.*;|data\ssource=.*;|ConnectionString
+Flash NonSWF Checks;;Crossdomain.xml Files Secure Flag False;;<allow-access-from domain=\".*secure=\"false\"
+Flash NonSWF Checks;;Insecure Crossdomain.xml Open Wildcard;;<cross-domain-policy>(.|\n|\r){0,10}<allow-access-from domain=\"\*\"
+Flash NonSWF Checks;;Unsafe Flash Embed Settings - AllowScriptAccess always;;param\sname.*allowscriptaccess.*always
+Flash NonSWF Checks;;Unsafe Flash Embed Settings - AllowNetworking all;;param\sname.*allownetworking.*all
+Flash NonSWF Checks;;Unsafe Flash Embed Settings - AllowFullScreen true;;param\sname.*allowfullscreen.*true
